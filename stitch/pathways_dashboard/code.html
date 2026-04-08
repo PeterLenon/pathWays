@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#cfe6f2",
+                    "background": "#f3faff",
+                    "primary": "#00366d",
+                    "on-tertiary-fixed": "#00201b",
+                    "surface-tint": "#315f9f",
+                    "surface-container": "#dbf1fe",
+                    "surface-bright": "#f3faff",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424750",
+                    "tertiary": "#003e35",
+                    "secondary-fixed": "#a3f69c",
+                    "on-background": "#071e27",
+                    "inverse-surface": "#1e333c",
+                    "outline-variant": "#c3c6d2",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#c7dde9",
+                    "secondary-container": "#a0f399",
+                    "secondary-fixed-dim": "#88d982",
+                    "on-primary-container": "#9abfff",
+                    "inverse-primary": "#a8c8ff",
+                    "on-primary-fixed": "#001b3c",
+                    "tertiary-fixed": "#a0f2e1",
+                    "on-secondary-fixed": "#002204",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#00574c",
+                    "surface": "#f3faff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1a4d8c",
+                    "on-tertiary-container": "#7bccbc",
+                    "primary-fixed": "#d6e3ff",
+                    "surface-container-high": "#d5ecf8",
+                    "primary-fixed-dim": "#a8c8ff",
+                    "tertiary-fixed-dim": "#84d5c5",
+                    "on-tertiary-fixed-variant": "#005046",
+                    "secondary": "#1b6d24",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#dff4ff",
+                    "surface-container-low": "#e6f6ff",
+                    "on-secondary-fixed-variant": "#005312",
+                    "surface-variant": "#cfe6f2",
+                    "on-primary-fixed-variant": "#0f4685",
+                    "on-surface": "#071e27",
+                    "on-error-container": "#93000a",
+                    "outline": "#737781",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#217128"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-nav {
+        backdrop-filter: blur(24px);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cfe6f2;
+        border-radius: 10px;
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-blue-950 dark:text-white font-headline">IncomePath</div>
+<div class="hidden md:flex items-center space-x-8 font-manrope tracking-tight font-semibold">
+<a class="text-blue-700 dark:text-blue-300 border-b-2 border-blue-700 dark:border-blue-300 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Optimizer</a>
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Roadmaps</a>
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">ROI Analysis</a>
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Resources</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-semibold transition-opacity active:opacity-80">Sign In</button>
+</div>
+</nav>
+<main class="flex-grow pt-24 pb-12 px-8 max-w-7xl mx-auto w-full">
+<!-- Header Section: Editorial Hero -->
+<header class="mb-12">
+<div class="inline-flex items-center px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-4">
+                Career Optimization Engine
+            </div>
+<h1 class="text-5xl font-extrabold font-headline text-on-surface tracking-tighter leading-none mb-4">
+                The Path to Your <span class="text-primary">Maximum Potential</span>.
+            </h1>
+<p class="text-on-surface-variant text-lg max-w-2xl font-medium">
+                Our AI analyzed 4.2M career trajectories to find your highest ROI opportunities. Explore your curated recommendations below.
+            </p>
+</header>
+<!-- Main Dashboard Layout: Asymmetrical Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- LEFT COLUMN: Recommendations (8 cols) -->
+<div class="lg:col-span-8 space-y-8">
+<div class="flex items-center justify-between">
+<h2 class="text-2xl font-bold font-headline tracking-tight">Top AI Recommendations</h2>
+<div class="flex space-x-2">
+<button class="p-2 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+<button class="p-2 rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">sort</span>
+</button>
+</div>
+</div>
+<!-- Recommendation Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- HVAC Tech Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 transition-all hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-surface-container p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">hvac</span>
+</div>
+<span class="bg-secondary-container/30 text-secondary font-bold text-[10px] px-2 py-1 rounded-full tracking-wider uppercase">98% Match</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-1">HVAC Tech</h3>
+<p class="text-sm text-on-surface-variant mb-6">Specialized climate control &amp; systems maintenance.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Potential Salary</span>
+<span class="font-bold text-primary">$55k-70k</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-4/5"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Time to Cert</span>
+<span class="font-bold">2 Years</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Local Demand</span>
+<span class="font-bold text-secondary">High</span>
+</div>
+</div>
+<button class="w-full mt-8 py-3 rounded-xl bg-primary-fixed text-on-primary-fixed font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-all">View Roadmap</button>
+</div>
+<!-- Registered Nurse Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 transition-all hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-surface-container p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">medical_services</span>
+</div>
+<span class="bg-secondary-container/30 text-secondary font-bold text-[10px] px-2 py-1 rounded-full tracking-wider uppercase">94% Match</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-1">Registered Nurse</h3>
+<p class="text-sm text-on-surface-variant mb-6">Patient care, medical diagnostics, and healthcare support.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Potential Salary</span>
+<span class="font-bold text-primary">$68k-95k</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-full"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Time to Cert</span>
+<span class="font-bold">2-4 Years</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Local Demand</span>
+<span class="font-bold text-secondary">Critical</span>
+</div>
+</div>
+<button class="w-full mt-8 py-3 rounded-xl bg-primary-fixed text-on-primary-fixed font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-all">View Roadmap</button>
+</div>
+<!-- CDL Driver Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 transition-all hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-surface-container p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">local_shipping</span>
+</div>
+<span class="bg-secondary-container/30 text-secondary font-bold text-[10px] px-2 py-1 rounded-full tracking-wider uppercase">89% Match</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-1">CDL Driver</h3>
+<p class="text-sm text-on-surface-variant mb-6">Long-haul logistics and commercial heavy transport.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Potential Salary</span>
+<span class="font-bold text-primary">$45k-85k</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-3/4"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Time to Cert</span>
+<span class="font-bold">3 Months</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Local Demand</span>
+<span class="font-bold text-secondary">High</span>
+</div>
+</div>
+<button class="w-full mt-8 py-3 rounded-xl bg-primary-fixed text-on-primary-fixed font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-all">View Roadmap</button>
+</div>
+<!-- Cybersecurity Card -->
+<div class="group bg-surface-container-lowest rounded-xl p-6 transition-all hover:shadow-2xl hover:shadow-primary/5 border border-transparent hover:border-outline-variant/10">
+<div class="flex justify-between items-start mb-6">
+<div class="bg-surface-container p-3 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">security</span>
+</div>
+<span class="bg-secondary-container/30 text-secondary font-bold text-[10px] px-2 py-1 rounded-full tracking-wider uppercase">82% Match</span>
+</div>
+<h3 class="text-xl font-bold font-headline mb-1">Cybersecurity Analyst</h3>
+<p class="text-sm text-on-surface-variant mb-6">Information security and network threat intelligence.</p>
+<div class="space-y-4">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Potential Salary</span>
+<span class="font-bold text-primary">$75k-110k</span>
+</div>
+<div class="w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/2"></div>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Time to Cert</span>
+<span class="font-bold">1-2 Years</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Local Demand</span>
+<span class="font-bold text-secondary">Emerging</span>
+</div>
+</div>
+<button class="w-full mt-8 py-3 rounded-xl bg-primary-fixed text-on-primary-fixed font-bold text-sm hover:bg-primary-container hover:text-on-primary-container transition-all">View Roadmap</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Analytics & Comparison (4 cols) -->
+<div class="lg:col-span-4 space-y-8">
+<!-- ROI Analytics Card -->
+<div class="bg-surface-container-highest rounded-xl p-8 shadow-sm">
+<h3 class="text-xl font-bold font-headline mb-6 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">analytics</span>
+                        ROI Analysis
+                    </h3>
+<div class="space-y-8">
+<div>
+<div class="flex justify-between items-end mb-2">
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-wider">Income Projection (5yr)</span>
+<span class="text-sm font-bold text-secondary">+142%</span>
+</div>
+<!-- Custom Chart Area -->
+<div class="h-32 flex items-end gap-2 bg-surface-container-low/50 rounded-xl p-4">
+<div class="w-1/4 bg-primary/20 rounded-t-sm h-1/4"></div>
+<div class="w-1/4 bg-primary/40 rounded-t-sm h-2/4"></div>
+<div class="w-1/4 bg-primary/70 rounded-t-sm h-3/4"></div>
+<div class="w-1/4 bg-secondary rounded-t-sm h-full shadow-lg shadow-secondary/20"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest/50 rounded-xl p-4">
+<h4 class="text-sm font-bold mb-3">Cost vs. Gain Analysis</h4>
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-primary"></div>
+<div class="flex-grow">
+<div class="text-[10px] text-on-surface-variant font-bold uppercase">Avg. Training Cost</div>
+<div class="text-sm font-bold">$12,400</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="flex-grow">
+<div class="text-[10px] text-on-surface-variant font-bold uppercase">Breakeven Point</div>
+<div class="text-sm font-bold">14 Months</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side-by-Side Comparison Feature -->
+<div class="bg-white rounded-xl p-6 border border-surface-variant shadow-sm overflow-hidden relative">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl">compare_arrows</span>
+</div>
+<h3 class="text-lg font-bold font-headline mb-4 relative z-10">Comparison Desk</h3>
+<div class="space-y-4 relative z-10">
+<div class="flex items-center gap-4 p-3 rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div class="flex-grow">
+<div class="text-xs font-bold">HVAC Technician</div>
+<div class="text-[10px] text-on-surface-variant">Trade Certification</div>
+</div>
+</div>
+<div class="flex items-center gap-4 p-3 rounded-xl bg-surface-container-low">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div class="flex-grow">
+<div class="text-xs font-bold">Registered Nurse</div>
+<div class="text-[10px] text-on-surface-variant">Degree Required</div>
+</div>
+</div>
+<div class="p-3 rounded-xl border border-dashed border-outline text-center text-on-surface-variant text-xs cursor-pointer hover:bg-surface-container-low transition-colors">
+                            + Add path to compare
+                        </div>
+</div>
+<button class="w-full mt-6 py-4 bg-primary text-on-primary rounded-full font-bold text-sm shadow-xl shadow-primary/20">Analyze Differences</button>
+</div>
+<!-- Featured Image Anchor -->
+<div class="rounded-xl overflow-hidden aspect-video relative group">
+<img alt="Modern Technical Education" class="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110" data-alt="close-up of industrial engineer working with high-tech sensors and tools in a clean bright laboratory environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiGWR91OXiRj3OLQhXnpYvSWvkQ34xxQDjmbG2r5m1eWCrI1xk-yPYadQvFLEnbqWObIjPRA2WN8ppmzfn9R-quWZAsJCmPTbIhKESOaWmzw6uJPZOxsUFWQtg-GtFKncv-qXDW6Rx3tG7WkkBCjkTD9VF8AQ2XsMZGjLibrHJLC4usnmKUaSXe8k6CndEBi6-0wl8n4PbDlLtgd3kDbPN5NtMDIY-TpwjUe0kdeUuSacA5_sTOy0PsJAbcARLXSU06hfal8YZGlI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex flex-col justify-end p-6">
+<p class="text-white font-bold font-headline">New Certification Tracks</p>
+<p class="text-on-primary-container text-xs">Explore the 2024 Green Energy pathways.</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-100 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto font-inter text-sm tracking-wide">
+<div class="mb-6 md:mb-0">
+<span class="font-manrope font-bold text-blue-950 dark:text-white">IncomePath AI</span>
+<p class="text-slate-500 dark:text-slate-400 mt-2">© 2024 IncomePath AI. The Editorial Architect.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Methodology</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Salary Data</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Privacy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

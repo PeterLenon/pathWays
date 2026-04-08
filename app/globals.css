@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+.editorial-gradient {
+  background: linear-gradient(135deg, #00366d 0%, #1a4d8c 100%);
+}
+
+.roadmap-line {
+  background: repeating-linear-gradient(
+    to bottom,
+    #c3c6d2 0,
+    #c3c6d2 5px,
+    transparent 5px,
+    transparent 10px
+  );
+}

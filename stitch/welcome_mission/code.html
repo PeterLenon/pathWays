@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IncomePath | The Editorial Architect</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Manrope & Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#cfe6f2",
+                    "background": "#f3faff",
+                    "primary": "#00366d",
+                    "on-tertiary-fixed": "#00201b",
+                    "surface-tint": "#315f9f",
+                    "surface-container": "#dbf1fe",
+                    "surface-bright": "#f3faff",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424750",
+                    "tertiary": "#003e35",
+                    "secondary-fixed": "#a3f69c",
+                    "on-background": "#071e27",
+                    "inverse-surface": "#1e333c",
+                    "outline-variant": "#c3c6d2",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#c7dde9",
+                    "secondary-container": "#a0f399",
+                    "secondary-fixed-dim": "#88d982",
+                    "on-primary-container": "#9abfff",
+                    "inverse-primary": "#a8c8ff",
+                    "on-primary-fixed": "#001b3c",
+                    "tertiary-fixed": "#a0f2e1",
+                    "on-secondary-fixed": "#002204",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#00574c",
+                    "surface": "#f3faff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1a4d8c",
+                    "on-tertiary-container": "#7bccbc",
+                    "primary-fixed": "#d6e3ff",
+                    "surface-container-high": "#d5ecf8",
+                    "primary-fixed-dim": "#a8c8ff",
+                    "tertiary-fixed-dim": "#84d5c5",
+                    "on-tertiary-fixed-variant": "#005046",
+                    "secondary": "#1b6d24",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#dff4ff",
+                    "surface-container-low": "#e6f6ff",
+                    "on-secondary-fixed-variant": "#005312",
+                    "surface-variant": "#cfe6f2",
+                    "on-primary-fixed-variant": "#004685",
+                    "on-surface": "#071e27",
+                    "on-error-container": "#93000a",
+                    "outline": "#737781",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#217128"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #00366d 0%, #1a4d8c 100%);
+        }
+        .text-editorial-header {
+            letter-spacing: -0.02em;
+        }
+    </style>
+</head>
+<body class="bg-background font-body text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-blue-950 dark:text-white font-headline">IncomePath</div>
+<div class="hidden md:flex items-center gap-10 font-manrope tracking-tight font-semibold">
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Optimizer</a>
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Roadmaps</a>
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">ROI Analysis</a>
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Resources</a>
+</div>
+<button class="editorial-gradient text-on-primary px-8 py-2.5 rounded-full font-headline text-sm font-bold tracking-tight shadow-md hover:opacity-90 active:opacity-80 transition-all">
+                Sign In
+            </button>
+</div>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Hero Section: Editorial Architect Style -->
+<section class="max-w-7xl mx-auto px-8 py-20 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-7 space-y-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="text-xs font-bold tracking-widest font-label uppercase">Mission Mississippi</span>
+</div>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-on-surface text-editorial-header leading-[1.1]">
+                    Bridging the Gap Between <span class="text-primary italic">Prosperity</span> and Wellness.
+                </h1>
+<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed max-w-2xl font-medium">
+                    In Mississippi, your zip code shouldn't determine your lifespan. We map the intricate connection between career trajectory and health outcomes to empower your future.
+                </p>
+<div class="flex flex-col sm:flex-row items-center gap-6 pt-4">
+<button class="w-full sm:w-auto editorial-gradient text-on-primary px-10 py-4 rounded-full font-headline font-extrabold text-lg shadow-xl hover:scale-105 transition-transform">
+                        Explore My Potential
+                    </button>
+<button class="w-full sm:w-auto px-8 py-4 rounded-full font-headline font-bold text-primary hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">play_circle</span>
+                        The Methodology
+                    </button>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<!-- Asymmetric Card Stack -->
+<div class="relative z-10 rounded-xl overflow-hidden shadow-2xl transform md:translate-x-4">
+<img class="w-full h-[500px] object-cover" data-alt="Professional Black woman mentor in a modern Mississippi workspace, soft sunlight, empathetic expression, professional editorial portrait photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtLCEFZ26edztnpMvVKlTAYonLWIL9roZgvdV_K31Kq5UX_NgCQvn83rz8mLjIdHJAua4V79jaOJsx69A5h3J9xcu4ty4da3V01Cy80Fu_EqhEm63rfK-wcceAeE5CcG7k6kI2UlZI798ovAa8nRWvcCeyvXig0RGYsmnbfa8KCVGJfqdZgQD7q2n4LkFDKLYLdJA1ZbrUu-g0qQ_3LWMOnUVbENe3gD9HMeiuCxI59WlqXvk3upIyvekuXqzCUV5ysnjMZVzDugg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 text-on-primary">
+<p class="font-headline font-bold text-2xl tracking-tight">"Stability is the foundation of community health."</p>
+<p class="font-label text-sm opacity-90 mt-2">IncomePath Methodology</p>
+</div>
+</div>
+<!-- Abstract Geometric Background Element -->
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-container/30 rounded-full blur-3xl -z-10"></div>
+<div class="absolute -bottom-12 -left-12 w-80 h-80 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
+</div>
+</section>
+<!-- Bento Grid Insights Section -->
+<section class="bg-surface-container-low py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4">The Correlation Landscape</h2>
+<p class="text-on-surface-variant font-medium">Visualizing data points across the Magnolia State.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Column 1: Career Roadmap -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between shadow-sm border-l-4 border-primary">
+<div>
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">insights</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-6">Income Potential &amp; Life Expectancy</h3>
+<p class="text-on-surface-variant leading-relaxed text-lg">
+                                For every $10,000 increase in median household income across Mississippi counties, we observe a direct 1.8-year increase in projected life expectancy. Our data-driven roadmaps help you navigate this vital trajectory.
+                            </p>
+</div>
+<div class="mt-12 flex items-baseline gap-4">
+<span class="text-5xl font-black text-primary font-headline">+15%</span>
+<span class="text-secondary font-bold font-label uppercase tracking-widest text-xs">Growth Opportunity Index</span>
+</div>
+</div>
+<!-- Column 2: Community Impact -->
+<div class="bg-primary text-on-primary p-10 rounded-xl flex flex-col justify-center relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20" data-alt="Diverse group of Mississippi professionals collaborating in a bright airy community center, modern aesthetic, soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvU2apbjtCdGUiia6RkVWnYrsO8vkuiL7DjyT4xf2FBOCY09ABuwHh4uixXUlFK3540tdopGPGKtLALxPFldVtbK8pLEqTjj0P-heog_YkAowRAEEOYgu_mLedAle69eTQVNFuhM7b_gjv86nodWQ6g_6Gr1wCwgd6dgH-2j9uBsQKvcqQ70HKn02tD1Wdf7dG0SwqFvP18-lxJbZp_eVELGbMq3N0zzq9zUFzNj5uo6o7yX-RJNnwpkhqXhhjCK9p0rzv6jFnC7A"/>
+<div class="relative z-10">
+<h3 class="font-headline text-2xl font-bold mb-4">Community Stability</h3>
+<p class="opacity-80 leading-relaxed mb-8">
+                                Career growth isn't just about the individual; it's about the resilience of the household.
+                            </p>
+<button class="bg-on-primary text-primary px-6 py-2 rounded-full font-bold text-sm hover:bg-primary-fixed transition-colors">
+                                View Regional Data
+                            </button>
+</div>
+</div>
+<!-- Column 3: Resource Analytics -->
+<div class="bg-secondary text-on-secondary p-10 rounded-xl shadow-lg transform md:-translate-y-8">
+<span class="material-symbols-outlined text-4xl mb-6">health_metrics</span>
+<h3 class="font-headline text-2xl font-bold mb-4">ROI Analysis</h3>
+<p class="opacity-90 leading-relaxed text-sm mb-6">
+                            Analyze the Return on Investment for certifications and degrees based on current Mississippi demand.
+                        </p>
+<div class="h-1 w-full bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed w-3/4"></div>
+</div>
+<p class="text-[10px] mt-2 font-bold tracking-tighter opacity-70 uppercase">Certification Value Score: 84%</p>
+</div>
+<!-- Column 4: Roadmap Visual -->
+<div class="md:col-span-2 bg-surface-container-highest p-10 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="space-y-4">
+<div class="inline-block px-3 py-1 bg-tertiary text-on-tertiary rounded-lg font-label text-[10px] font-bold tracking-widest uppercase">Upcoming Roadmap</div>
+<h3 class="font-headline text-2xl font-bold">Nursing &amp; Allied Health Path</h3>
+<p class="text-on-surface-variant text-sm">Targeted growth strategies for Jackson and Gulfport healthcare corridors.</p>
+<a class="text-primary font-bold text-sm inline-flex items-center gap-2 group" href="#">
+                                Learn more 
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm rotate-2">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="text-xs font-bold text-on-surface">Career Milestone 1</div>
+</div>
+<div class="space-y-2">
+<div class="h-2 bg-surface-container w-full rounded-full"></div>
+<div class="h-2 bg-surface-container w-5/6 rounded-full"></div>
+<div class="h-2 bg-secondary/30 w-4/6 rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="max-w-7xl mx-auto px-8 py-32 text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface mb-8">Ready to architect your professional narrative?</h2>
+<p class="text-on-surface-variant text-lg mb-12">Join thousands of Mississippians using IncomePath to secure their future and their health.</p>
+<button class="editorial-gradient text-on-primary px-12 py-5 rounded-full font-headline font-extrabold text-xl shadow-2xl hover:scale-105 active:scale-95 transition-all">
+                    Start Your Journey
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full mt-auto border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-100 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-manrope font-bold text-blue-950 dark:text-white text-xl mb-2">IncomePath AI</div>
+<p class="font-inter text-sm tracking-wide text-slate-500 dark:text-slate-400">© 2024 IncomePath AI. The Editorial Architect.</p>
+</div>
+<div class="flex gap-8 font-inter text-sm tracking-wide">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Methodology</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Salary Data</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Privacy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

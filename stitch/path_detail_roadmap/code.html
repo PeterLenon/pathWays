@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IncomePath | Career Roadmap Detail</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#cfe6f2",
+                    "background": "#f3faff",
+                    "primary": "#00366d",
+                    "on-tertiary-fixed": "#00201b",
+                    "surface-tint": "#315f9f",
+                    "surface-container": "#dbf1fe",
+                    "surface-bright": "#f3faff",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#424750",
+                    "tertiary": "#003e35",
+                    "secondary-fixed": "#a3f69c",
+                    "on-background": "#071e27",
+                    "inverse-surface": "#1e333c",
+                    "outline-variant": "#c3c6d2",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-dim": "#c7dde9",
+                    "secondary-container": "#a0f399",
+                    "secondary-fixed-dim": "#88d982",
+                    "on-primary-container": "#9abfff",
+                    "inverse-primary": "#a8c8ff",
+                    "on-primary-fixed": "#001b3c",
+                    "tertiary-fixed": "#a0f2e1",
+                    "on-secondary-fixed": "#002204",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#00574c",
+                    "surface": "#f3faff",
+                    "on-error": "#ffffff",
+                    "primary-container": "#1a4d8c",
+                    "on-tertiary-container": "#7bccbc",
+                    "primary-fixed": "#d6e3ff",
+                    "surface-container-high": "#d5ecf8",
+                    "primary-fixed-dim": "#a8c8ff",
+                    "tertiary-fixed-dim": "#84d5c5",
+                    "on-tertiary-fixed-variant": "#005046",
+                    "secondary": "#1b6d24",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#dff4ff",
+                    "surface-container-low": "#e6f6ff",
+                    "on-secondary-fixed-variant": "#005312",
+                    "surface-variant": "#cfe6f2",
+                    "on-primary-fixed-variant": "#0f4685",
+                    "on-surface": "#071e27",
+                    "on-error-container": "#93000a",
+                    "outline": "#737781",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#217128"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-gradient {
+            background: linear-gradient(135deg, #00366d 0%, #1a4d8c 100%);
+        }
+        .roadmap-line {
+            background: repeating-linear-gradient(to bottom, #c3c6d2 0, #c3c6d2 5px, transparent 5px, transparent 10px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none bg-gradient-to-b from-slate-100 to-transparent dark:from-slate-800">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-blue-950 dark:text-white">IncomePath</div>
+<div class="hidden md:flex items-center gap-8 font-manrope tracking-tight font-semibold">
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Optimizer</a>
+<a class="text-blue-700 dark:text-blue-300 border-b-2 border-blue-700 dark:border-blue-300 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Roadmaps</a>
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">ROI Analysis</a>
+<a class="text-slate-600 dark:text-slate-400 pb-1 hover:text-blue-800 dark:hover:text-blue-200 transition-colors" href="#">Resources</a>
+</div>
+<button class="px-6 py-2 rounded-full editorial-gradient text-white font-bold tracking-tight shadow-md hover:opacity-90 transition-opacity">
+                Sign In
+            </button>
+</div>
+</nav>
+<main class="mt-24 mb-20 flex-grow max-w-7xl mx-auto px-8 w-full">
+<!-- Breadcrumb & Header -->
+<header class="mb-12">
+<div class="flex items-center gap-2 text-primary mb-4 opacity-70">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+<span class="text-xs font-label font-bold tracking-widest uppercase">BACK TO EXPLORE</span>
+</div>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-extrabold tracking-tighter text-primary mb-4">Cloud Systems Architect</h1>
+<p class="text-xl text-on-surface-variant font-body leading-relaxed">A high-growth technical path optimized for mid-career pivoters with strong logical foundations.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="p-4 bg-secondary-container rounded-xl flex flex-col items-center justify-center min-w-[120px]">
+<span class="text-xs font-label font-bold text-on-secondary-container tracking-tighter">ROI SCORE</span>
+<span class="text-2xl font-headline font-extrabold text-on-secondary-container">9.4</span>
+</div>
+<div class="p-4 bg-surface-container-high rounded-xl flex flex-col items-center justify-center min-w-[120px]">
+<span class="text-xs font-label font-bold text-primary tracking-tighter">EST. SALARY</span>
+<span class="text-2xl font-headline font-extrabold text-primary">$124k</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left Column: Step-by-Step Roadmap -->
+<section class="lg:col-span-7 space-y-12">
+<div class="flex items-center justify-between">
+<h2 class="text-3xl font-bold tracking-tight text-primary">Strategic Execution Roadmap</h2>
+<span class="px-3 py-1 bg-primary-fixed text-on-primary-fixed rounded-full text-xs font-bold">ACCELERATED PATH</span>
+</div>
+<div class="relative space-y-16 pl-4">
+<!-- Step 1 -->
+<div class="relative flex gap-8">
+<div class="absolute left-[-2px] top-8 h-full w-0.5 roadmap-line"></div>
+<div class="z-10 w-12 h-12 rounded-full editorial-gradient flex items-center justify-center text-white font-bold flex-shrink-0 shadow-lg">1</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex-grow shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-primary">Foundation: Associate Certification</h3>
+<span class="text-xs font-bold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span> 3 MONTHS
+                                </span>
+</div>
+<p class="text-on-surface-variant mb-4 font-body leading-relaxed">Enroll in the AWS Certified Cloud Practitioner track at community college partners. Focus on fundamental infrastructure concepts.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-primary text-xs font-semibold rounded-lg">AWS Fundamentals</span>
+<span class="px-3 py-1 bg-surface-container text-primary text-xs font-semibold rounded-lg">Cloud Security</span>
+</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex gap-8">
+<div class="absolute left-[-2px] top-8 h-full w-0.5 roadmap-line"></div>
+<div class="z-10 w-12 h-12 rounded-full bg-surface-container-highest border-2 border-primary-container flex items-center justify-center text-primary font-bold flex-shrink-0">2</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex-grow shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-primary">Internship / Junior Role</h3>
+<span class="text-xs font-bold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">schedule</span> 6-12 MONTHS
+                                </span>
+</div>
+<p class="text-on-surface-variant mb-4 font-body leading-relaxed">Target 'Cloud Associate' roles within local MSPs (Managed Service Providers). Gain hands-on exposure to migration workflows.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-primary text-xs font-semibold rounded-lg">Terraform</span>
+<span class="px-3 py-1 bg-surface-container text-primary text-xs font-semibold rounded-lg">Docker basics</span>
+</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex gap-8">
+<div class="z-10 w-12 h-12 rounded-full bg-surface-container-low border-2 border-outline-variant flex items-center justify-center text-outline font-bold flex-shrink-0">3</div>
+<div class="bg-surface-container-lowest p-8 rounded-xl flex-grow shadow-sm opacity-80">
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-xl font-bold text-primary">Specialization &amp; Promotion</h3>
+<span class="text-xs font-bold text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">lock</span> MILESTONE
+                                </span>
+</div>
+<p class="text-on-surface-variant mb-4 font-body leading-relaxed">Pursue Professional level Architect certifications. Negotiate for Lead status or move to Fortune 500 enterprise cloud teams.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container text-primary text-xs font-semibold rounded-lg">Multi-cloud</span>
+<span class="px-3 py-1 bg-surface-container text-primary text-xs font-semibold rounded-lg">Kubernetes</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: AI Insights & Resources -->
+<aside class="lg:col-span-5 space-y-8">
+<!-- AI Insights Bento -->
+<div class="bg-surface-container-high rounded-xl p-8 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<h3 class="text-xs font-label font-bold tracking-[0.2em] text-primary mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">auto_awesome</span> AI ARCHITECT INSIGHTS
+                    </h3>
+<div class="space-y-6">
+<div>
+<h4 class="font-bold text-primary mb-1">Why this fits your constraints</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Your prior experience in 'Technical Support' bridges 65% of the initial knowledge gap, reducing retraining time by an estimated 4 months.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-white/50 backdrop-blur-sm rounded-lg">
+<span class="text-2xl font-bold text-secondary">+22%</span>
+<p class="text-[10px] font-bold text-on-surface-variant">LOCAL DEMAND</p>
+</div>
+<div class="p-4 bg-white/50 backdrop-blur-sm rounded-lg">
+<span class="text-2xl font-bold text-primary">Low</span>
+<p class="text-[10px] font-bold text-on-surface-variant">AI DISRUPTION RISK</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Financial Aid & Resources -->
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm">
+<h3 class="text-xl font-bold text-primary mb-6">Local Support &amp; Resources</h3>
+<div class="space-y-4">
+<a class="group flex items-center justify-between p-4 bg-surface rounded-lg hover:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-blue-100 flex items-center justify-center text-blue-900">
+<span class="material-symbols-outlined">school</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">State Workforce Grant</p>
+<p class="text-[10px] text-on-surface-variant uppercase font-semibold">UP TO $5,000 COVERED</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="group flex items-center justify-between p-4 bg-surface rounded-lg hover:bg-surface-container-high transition-colors" href="#">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-green-100 flex items-center justify-center text-green-900">
+<span class="material-symbols-outlined">volunteer_activism</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Veterans Tech Transition</p>
+<p class="text-[10px] text-on-surface-variant uppercase font-semibold">ELIGIBLE PROGRAM</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<div class="mt-8">
+<img class="w-full h-48 object-cover rounded-xl" data-alt="professional modern community college campus with large glass windows and students collaborating in a sunlit tech hub" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbJbt3FHpAKqR8AHpJChHiXqyQKho8ocOzOVK4h2szMvuEXB9R3uB8hMnBAWOvZrybe6iAU77V8xKP463JNQ930IMpA-Dqla4mkSUYkcqW_ocbpiGPyhsRIXaqtAfPUIdzXeGLTWVawju02rn5sZE1mgB6WW_gdJAHq1HwUHGga1jhO7_YXG5gUzLxO61uNYNC8p-QH18zz0DQU42HR2He7fGmJRs2QVbPNR1abI5k-RKj0mH95vKdWr-ybOlxnnCMx6tkAwjyFIw"/>
+<div class="mt-4">
+<p class="text-xs font-bold text-primary mb-1">PRIMARY PARTNER</p>
+<p class="text-sm font-bold">Northview Community College</p>
+<p class="text-xs text-on-surface-variant">Advanced Cloud Systems Lab</p>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-100 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto">
+<div class="mb-6 md:mb-0">
+<span class="font-manrope font-bold text-blue-950 dark:text-white">IncomePath AI</span>
+<p class="font-inter text-sm tracking-wide text-slate-500 dark:text-slate-400 mt-2">© 2024 IncomePath AI. The Editorial Architect.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-inter text-sm tracking-wide">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Methodology</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Salary Data</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Privacy</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

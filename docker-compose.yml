@@ -1,0 +1,16 @@
+services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: incomepath-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    restart: unless-stopped
+    # CPU-only — no GPU device configuration needed.
+    # qwen2.5:14b will run on CPU with ~8.7GB RAM at Q4_K_M quantization.
+    # Pull the model after first start: docker exec incomepath-ollama ollama pull qwen2.5:14b
+
+volumes:
+  ollama_data:
+    driver: local
