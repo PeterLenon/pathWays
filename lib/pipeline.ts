@@ -77,7 +77,7 @@ export async function runAnalysisPipeline(
 
   // Stage 4: LLM inference
   const llm = getLLMClient();
-  console.log(`[pipeline] Invoking LLM: backend=${llm.backend} model=${llm.model}`);
+  console.log(`[pipeline] Invoking LLM: model=${llm.model}`);
 
   const systemPrompt = buildEnrichedSystemPrompt(enrichedCareers);
   const userMessage = buildUserMessage(userProfile);
