@@ -12,8 +12,8 @@
  * duration of the Next.js process (server restarts clear the cache). In a
  * production system this would be cached in Supabase with a 24-hour TTL.
  *
- * We make calls concurrently with Promise.allSettled so one failure does not
- * block the others.
+ * We make calls sequentially to avoid triggering Adzuna's per-second rate limit.
+ * One failure does not block the others — each is caught individually.
  */
 
 export interface JobsDemandData {
@@ -142,17 +142,14 @@ export async function fetchJobsDemandData(
     return results;
   }
 
-  const settled = await Promise.allSettled(
-    careerIds.map((id) => fetchForCareer(id, appId, appKey))
-  );
-
-  settled.forEach((outcome, index) => {
-    if (outcome.status === "fulfilled") {
-      results.set(careerIds[index], outcome.value);
-    } else {
-      console.warn(`[jobs-api] Failed for ${careerIds[index]}:`, outcome.reason);
+  for (const id of careerIds) {
+    try {
+      const data = await fetchForCareer(id, appId, appKey);
+      results.set(id, data);
+    } catch (err) {
+      console.warn(`[jobs-api] Failed for ${id}:`, err);
     }
-  });
+  }
 
   console.log(`[jobs-api] Demand data for ${results.size}/${careerIds.length} careers`);
   return results;

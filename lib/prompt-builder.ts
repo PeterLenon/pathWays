@@ -88,11 +88,11 @@ ${careerBlocks}
 
 OUTPUT SCHEMA (return exactly this structure):
 {
-  "pathways": [ // 3-5 items, ordered best fit first
+  "pathways": [ // 2-3 items, ordered best fit first
     {
       "id": "string",
       "pathName": "string",
-      "description": "string (2-3 sentences, advisory tone)",
+      "description": "string (1-2 sentences, advisory tone)",
       "pathwayType": "vocational_cert|associates_degree|bachelors_degree|industry_cert|apprenticeship|direct_entry",
       "fitScore": 1-100,
       "fitReason": "string (1 sentence why this fits this specific person)",
@@ -100,7 +100,7 @@ OUTPUT SCHEMA (return exactly this structure):
       "estimatedCost": number,
       "salaryRange": { "low": number, "median": number, "high": number, "confidence": "high|medium|low", "confidenceReason": "string", "source": "string" },
       "programOptions": [ { "name": "string", "institution": "string", "location": "string", "estimatedCost": number, "duration": "string" } ],
-      "nextSteps": [ { "order": number, "action": "string", "timeframe": "This week|Within 30 days|Within 60 days", "cost": number, "details": "string" } ],
+      "nextSteps": [ { "order": number, "action": "string", "timeframe": "This week|Within 30 days|Within 60 days", "cost": number, "details": "string" } ], // 2-3 items only
       "costBenefit": { "totalTrainingCost": number, "estimatedTimeToEmployment": "string", "firstYearIncome": number, "breakEvenMonths": number, "fiveYearNetGain": number, "currentAnnualIncome": number },
       "barriers": ["string"],
       "supports": ["string"]
@@ -133,5 +133,5 @@ sectors=${profile.interestedSectors.join(",")} skills=${profile.existingSkills.j
 work_env=${profile.workPreference} physical=${profile.physicalDemands}
 goal: "${profile.goalStatement}"
 
-Generate 3–5 pathway recommendations. Return valid JSON only.`;
+Generate exactly 2 pathway recommendations. Be concise. Return valid JSON only.`;
 }

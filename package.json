@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "prebuild": "xattr -rd com.apple.quarantine . 2>/dev/null; node -e \"require('./node_modules/next/dist/build/utils'); require('./node_modules/next/dist/server/next.js'); require('./node_modules/next/dist/build/index.js'); require('./node_modules/next/dist/server/require.js'); require('./node_modules/next/dist/server/load-components.js'); require('./node_modules/next/dist/lib/worker.js');\"",
+    "build": "NODE_OPTIONS='--max-old-space-size=3072' next build",
     "start": "next start"
   },
   "dependencies": {
@@ -12,7 +13,6 @@
     "@hookform/resolvers": "^5.2.2",
     "@supabase/ssr": "^0.10.0",
     "@supabase/supabase-js": "^2.102.1",
-    "groq-sdk": "^1.1.2",
     "next": "^14.2.35",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

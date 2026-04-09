@@ -61,7 +61,7 @@ export async function runAnalysisPipeline(
   userProfile: UserProfile
 ): Promise<PathwayAnalysisResult> {
   // Stage 1: Rule-based pre-selection
-  const topCareers = selectTopCareers(userProfile, 4);
+  const topCareers = selectTopCareers(userProfile, 3);
   const careerIds = topCareers.map((c) => c.id);
 
   console.log(`[pipeline] Selected careers: ${careerIds.join(", ")}`);
@@ -85,7 +85,7 @@ export async function runAnalysisPipeline(
   const completion = await llm.chat.completions.create({
     model: llm.model,
     temperature: 0.3,
-    max_tokens: 8192,
+    max_tokens: 2000,
     response_format: { type: "json_object" },
     messages: [
       { role: "system", content: systemPrompt },
@@ -103,7 +103,7 @@ export async function runAnalysisPipeline(
   try {
     parsed = JSON.parse(rawText) as PathwayAnalysisResult;
   } catch {
-    console.error("[pipeline] LLM response was not valid JSON:", rawText.slice(0, 500));
+    console.error("[pipeline] LLM response was not valid JSON (length=%d): %s", rawText.length, rawText.slice(-200));
     throw new Error("AI returned an unexpected format — please try again");
   }
 

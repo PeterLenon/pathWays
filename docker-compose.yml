@@ -1,4 +1,6 @@
 services:
+
+  # ── Ollama (LLM inference) ───────────────────────────────────────────────────
   ollama:
     image: ollama/ollama:latest
     container_name: incomepath-ollama
@@ -6,10 +8,43 @@ services:
       - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
+    networks:
+      - incomepath
     restart: unless-stopped
     # CPU-only — no GPU device configuration needed.
-    # qwen2.5:14b will run on CPU with ~8.7GB RAM at Q4_K_M quantization.
-    # Pull the model after first start: docker exec incomepath-ollama ollama pull qwen2.5:14b
+    # After first start, pull the model:
+    #   docker exec incomepath-ollama ollama pull qwen2.5:7b
+
+  # ── Next.js web app ─────────────────────────────────────────────────────────
+  web:
+    build:
+      context: .
+      # NEXT_PUBLIC_* vars must be present at build time — they are baked
+      # into the client JS bundle by webpack. Copy them from your .env file
+      # (docker compose automatically loads a .env file in the same directory).
+      args:
+        NEXT_PUBLIC_SUPABASE_URL:      ${NEXT_PUBLIC_SUPABASE_URL}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+        NEXT_PUBLIC_SITE_URL:          ${NEXT_PUBLIC_SITE_URL:-http://localhost:3000}
+    environment:
+      # Point at the ollama container — service name resolves within the network.
+      OLLAMA_HOST:  http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen2.5:7b}
+      # Server-only secrets — injected at runtime, never baked into the image.
+      BLS_API_KEY:   ${BLS_API_KEY:-}
+      ADZUNA_APP_ID: ${ADZUNA_APP_ID:-}
+      ADZUNA_APP_KEY: ${ADZUNA_APP_KEY:-}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - ollama
+    networks:
+      - incomepath
+    restart: unless-stopped
+
+networks:
+  incomepath:
+    driver: bridge
 
 volumes:
   ollama_data:

@@ -12,6 +12,9 @@ import Footer from "@/components/Footer";
 import { createServerClientFromCookies } from "@/lib/supabase-server";
 import { PathwayAnalysisResult } from "@/lib/types";
 
+// This page reads cookies and makes live Supabase calls — must never be statically generated.
+export const dynamic = "force-dynamic";
+
 interface SavedResult {
   id: string;
   pathway_results: PathwayAnalysisResult;
