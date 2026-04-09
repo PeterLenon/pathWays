@@ -103,7 +103,7 @@ export async function fetchBLSWageData(): Promise<Map<string, BLSWageData>> {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(10_000),
+      signal: AbortSignal.timeout(30_000),
     });
 
     if (!response.ok) {
