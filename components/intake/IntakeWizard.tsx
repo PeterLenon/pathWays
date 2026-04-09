@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
@@ -15,6 +15,7 @@ import StepIndicator from "./StepIndicator";
 import Step1Background from "./Step1Background";
 import Step2Constraints from "./Step2Constraints";
 import Step3Interests from "./Step3Interests";
+import PipelineModal from "@/components/PipelineModal";
 
 const STEP_LABELS = ["Background", "Situation", "Interests"];
 const TOTAL_STEPS = 3;
@@ -48,6 +49,11 @@ export default function IntakeWizard() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [showModal, setShowModal] = useState(false);
+  const [pipelineDone, setPipelineDone] = useState(false);
+  // Tracks whether the modal actually opened before the fetch resolved.
+  // useRef avoids the stale-closure bug that would occur with useState inside handleSubmit.
+  const modalOpenedRef = useRef(false);
   const router = useRouter();
 
   const form = useForm<FullProfileData, unknown, FullProfileData>({
@@ -84,6 +90,13 @@ export default function IntakeWizard() {
     const data = form.getValues();
     setIsSubmitting(true);
     setSubmitError(null);
+    modalOpenedRef.current = false;
+
+    // Open the pipeline modal after 2 seconds if the fetch is still in progress.
+    const modalTimer = setTimeout(() => {
+      setShowModal(true);
+      modalOpenedRef.current = true;
+    }, 2000);
 
     try {
       const response = await fetch("/api/analyze", {
@@ -100,8 +113,22 @@ export default function IntakeWizard() {
       const result = await response.json();
       sessionStorage.setItem("pathwayResults", JSON.stringify(result));
       sessionStorage.setItem("userProfile", JSON.stringify(data));
-      router.push("/results");
+
+      clearTimeout(modalTimer);
+
+      if (modalOpenedRef.current) {
+        // Modal is visible — stop the animation, then navigate after a brief pause
+        // so the user sees the "done" state before being redirected.
+        setPipelineDone(true);
+        setTimeout(() => router.push("/results"), 1500);
+      } else {
+        // Fetch resolved before the 2-second modal delay — navigate directly.
+        router.push("/results");
+      }
     } catch (err) {
+      clearTimeout(modalTimer);
+      setShowModal(false);
+      modalOpenedRef.current = false;
       setSubmitError(
         err instanceof Error
           ? err.message
@@ -114,6 +141,8 @@ export default function IntakeWizard() {
   const sidebar = sidebarContent[currentStep];
 
   return (
+    <>
+    <PipelineModal isOpen={showModal} isDone={pipelineDone} />
     <div className="pb-24 px-6 pt-10">
       <div className="max-w-6xl mx-auto">
         {/* Progress indicator */}
@@ -257,5 +286,6 @@ export default function IntakeWizard() {
         </div>
       </div>
     </div>
+    </>
   );
 }
