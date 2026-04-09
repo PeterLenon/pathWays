@@ -36,6 +36,10 @@ services:
       ADZUNA_APP_KEY: ${ADZUNA_APP_KEY:-}
     ports:
       - "3000:3000"
+    # Use Google DNS — WSL2's default Docker DNS sometimes fails on external hostnames.
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
     depends_on:
       - ollama
     networks:
