@@ -22,9 +22,10 @@ interface PipelineModalProps {
 
 const NODES = {
   // Left column — inputs
-  userProfile:          { x: 110, y: 160, label: "User Profile",           sub: "Education · Skills · Income · Constraints" },
-  blsApi:               { x: 110, y: 330, label: "BLS API",                sub: "Wage statistics" },
-  adzunaApi:            { x: 110, y: 420, label: "Adzuna API",             sub: "Job demand data" },
+  userProfile:          { x: 110, y: 110, label: "User Profile",           sub: "Education · Skills · Income · Constraints" },
+  blsApi:               { x: 110, y: 230, label: "BLS",                    sub: "Wage statistics" },
+  adzunaApi:            { x: 110, y: 350, label: "Adzuna",                 sub: "Job demand data" },
+  censusGov:            { x: 110, y: 440, label: "Census.gov",             sub: "Demographics · Labor stats" },
 
   // Center — AI engine
   aiEngine:             { x: 480, y: 250, label: "AI Engine",              sub: "LLM · qwen2.5:7b" },
@@ -47,6 +48,7 @@ const EDGES = [
   { from: "userProfile",      to: "aiEngine",         delay: "0s" },
   { from: "blsApi",           to: "aiEngine",         delay: "0.3s" },
   { from: "adzunaApi",        to: "aiEngine",         delay: "0.6s" },
+  { from: "censusGov",        to: "aiEngine",         delay: "0.9s" },
   // AI Engine → model nodes
   { from: "aiEngine",         to: "skillMatching",    delay: "0.1s" },
   { from: "aiEngine",         to: "incomePrediction", delay: "0.4s" },
